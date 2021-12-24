@@ -1,0 +1,48 @@
+    .cardGrid {
+    width: 80%;
+    margin: 30px 10% 0 10%;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+  }
+  
+  .cardGridItem {
+    --cardGridItemHex: #9dd0f2;
+    padding: 20px;
+    margin: 0 25px 25px 25px;
+    font-size: 25px;
+    text-align: center;
+    border: 2px solid var(--cardGridItemHex);
+    border-radius: 20px;
+    box-shadow: 0 0 2px var(--cardGridItemHex),
+      0 0 10px var(--cardGridItemHex);
+    max-width: 75%;
+    transition: 0.1s linear;
+  
+    transform-style: preserve-3d;
+  }
+  
+  .cardGridItemTitle {
+    padding-bottom: 15px;
+    margin-bottom: 50px;
+    transition: 0.2s ease-in-out;
+    user-select: none;
+    background-image: linear-gradient(to right, #9dd0f2, #146499);
+    background-repeat: no-repeat;
+    background-size: 100px 3px, 100px 100%;
+    background-position: center bottom, 0 4px;
+  }
+  
+  .cardGridItem:hover {
+    box-shadow: 0 0 10px var(--cardGridItemHex),
+      0 0 20px var(--cardGridItemHex);
+  }
+  
+  .cardGridItem:hover > .cardGridItemTitle {
+    background-size: 100% 3px, 100px 100%;
+  }
+  
+  .cardGridItemContent {
+    font-size: 16px;
+  }
+  
