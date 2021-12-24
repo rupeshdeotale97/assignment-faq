@@ -1,53 +1,22 @@
 import React from "react";
-import { Button } from "react-bootstrap";
-import { FaEnvelope } from "react-icons/fa";
-import ReactTilt from "react-parallax-tilt";
-import { cardGrid, cardGridItem, cardGridItemTitle, cardGridItemContent } from './cards.module.css';
-
- function Cards() {
-  const gridItems = [
-    {
-      id: "contactUs",
-      title: "Contact Us",
-      content: (
-        <>
-          <Button variant="success" href="/contactus">
-            <FaEnvelope />
-            Contact Us
-          </Button>
-        </>
-      )
-    },
-    {
-        id: "order",
-        title: "Order",
-        content: (
-          <>
-            Where is my
-            <br />order ?
-          </>
-        )
-      },
-  ];
-
+import { Card, Button, Container, Row } from "react-bootstrap";
+const CardList = ({ cardInfo }) => {
   return (
-    <>
-      <div className={cardGrid}>
-        {gridItems.map((item) => {
-          return (
-            <>
-              <ReactTilt scale={1.1} tiltEnable={false} key={item.id}>
-                <div className={cardGridItem}>
-                  <div className={cardGridItemTitle}>{item.title}</div>
-                  <div className={cardGridItemContent}>{item.content}</div>
-                </div>
-              </ReactTilt>
-            </>
-          );
-        })}
-      </div>
-    </>
+    <Container>
+      <Row className="m-5">
+        <Card style={{ width: "18rem" }}>
+          <Card.Img variant="top" src="http://via.placeholder.com/640x360
+" />
+          <Card.Body>
+            <Card.Title>Order Rf no. {cardInfo.reference}</Card.Title>
+            <Card.Text>{cardInfo.date}</Card.Text>
+            <Card.Text>{cardInfo.delivered}</Card.Text>
+            <Button variant="primary">{cardInfo.cost}</Button>
+          </Card.Body>
+        </Card>
+      </Row>
+    </Container>
   );
-}
+};
 
-export default Cards;
+export default CardList;
