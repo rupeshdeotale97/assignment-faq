@@ -21,13 +21,18 @@ const ContactPage = ({ orders }) => {
   const [matchCaptchaCode, setMatchCaptchaCode] = useState();
   const [showError, setShowError] = useState(false);
 
-  const isEnabled = orderReference && name && phone && email && messageBody;
+  const isEnabled = orderReference && name && phone && email && messageBody && matchCaptchaCode;
 
   const sendEmail = () => {
     if (captchaCode !== matchCaptchaCode) {
       setShowError(true);
     } else {
       setShowError(false);
+      setOrderReference('');
+      setName('');
+      setEmail('');
+      setPhone('');
+      setMessageBody('');
       toast.success("Success! Your message was sent.");
     }
   };
@@ -69,6 +74,7 @@ const ContactPage = ({ orders }) => {
               data-testid="nameAuthor"
               placeholder="Your name or alias..."
               autoComplete="off"
+              value={name}
               onChange={(evt) => setName(evt.target.value)}
             />
           </InputGroup>
@@ -79,6 +85,7 @@ const ContactPage = ({ orders }) => {
               data-testid="phoneAuthor"
               placeholder="Your Phone..."
               autoComplete="off"
+              value={phone}
               onChange={(evt) => setPhone(evt.target.value)}
             />
           </InputGroup>
@@ -88,6 +95,7 @@ const ContactPage = ({ orders }) => {
               id="emailAuthor"
               placeholder="Your email..."
               autoComplete="off"
+              value={email}
               data-testid="emailAuthor"
               onChange={(evt) => setEmail(evt.target.value)}
             />
@@ -98,6 +106,7 @@ const ContactPage = ({ orders }) => {
             <FormControl
               as="textarea"
               id="emailBody"
+              value={messageBody}
               placeholder="Message body..."
               rows="5"
               data-testid="emailBody"
@@ -125,6 +134,7 @@ const ContactPage = ({ orders }) => {
               id="captchaAuthor"
               placeholder="Enter above Captcha..."
               autoComplete="off"
+              value={matchCaptchaCode}
               data-testid="captchaAuthor"
               onChange={(evt) => setMatchCaptchaCode(evt.target.value)}
             />
