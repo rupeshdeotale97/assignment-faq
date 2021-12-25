@@ -1,17 +1,14 @@
 import Layout from '../components/layout';
 import SearchBar from '../components/forms/searchBar';
 import Grids from '../components/forms/grids/grids';
-import { useRouter } from 'next/router'
 import updatePageView from '../utils/updatePageView'
 function App() {
-  const router = useRouter();
-  const goTo = (path) => {
-    console.log("called");
-    router.push(path);
-  }
   return (
     <Layout>
-        <SearchBar />
+        <h2 className="text-center mb-5" data-testid="heading">
+          Help Center
+        </h2>
+        <SearchBar searchUpdate={() => {}} />
         <Grids />
     </Layout>
   );

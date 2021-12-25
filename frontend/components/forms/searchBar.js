@@ -39,7 +39,7 @@ const SearchBar = ({
               placeholder="Search..."
               defaultValue={searchInput}
               onChange={(e) => searchUpdate(e.target.value)}
-              data-testid={searchId}
+              data-testid={'search'}
               aria-label="search"
               aria-describedby="search"
             />
