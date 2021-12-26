@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Button, Container, Row } from "react-bootstrap";
-const CardList = ({ cardInfo }) => {
+const CardDetails = ({ cardInfo }) => {
   const getIsDelivered = () => {
     return cardInfo.delivered ? 'Delivered': "Not Delivered";
   }
@@ -21,4 +21,4 @@ const CardList = ({ cardInfo }) => {
   );
 };
 
-export default CardList;
+export default CardDetails;

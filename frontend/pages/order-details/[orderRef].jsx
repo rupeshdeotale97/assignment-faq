@@ -4,7 +4,7 @@ import API_URL from '../../constants/costants'
 import updatePageView from '../../utils/updatePageView'
 import Layout from '../../components/layout';
 import SearchBar from '../../components/forms/searchBar';
-import CardList from '../../components/forms/cards/cards';
+import CardDetails from '../../components/forms/cards/cards';
 
 function OrderDetails({ orders }) {
   const router = useRouter()
@@ -32,7 +32,7 @@ function OrderDetails({ orders }) {
       />
 
       {orderDetails && orderDetails ? (
-        <div data-testid="order"><CardList cardInfo={orderDetails}  /></div>
+        <div data-testid="order"><CardDetails cardInfo={orderDetails}  /></div>
       ) : (
         <p className="text-center mt-4 h4">Cannot find order</p>
       )}
