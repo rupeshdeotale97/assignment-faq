@@ -5,12 +5,6 @@ import updatePageView from '../../utils/updatePageView'
 import Layout from '../../components/layout';
 import SearchBar from '../../components/forms/searchBar';
 import CardList from '../../components/forms/cards/cards';
-import {
-  Container,
-  Row,
-  Col,
-  Card
-} from 'react-bootstrap';
 
 function OrderDetails({ orders }) {
   const router = useRouter()
@@ -27,21 +21,21 @@ function OrderDetails({ orders }) {
       <h2 className="text-center" data-testid="heading">
         Order Details
       </h2>
-      
+
       <SearchBar
         className="mt-4"
         searchInput={searchInput}
         searchUpdate={setSearchInput}
         onSearch={onSearch}
-        searchId={'order-search'}
-        submitId={'search-button'}
+        searchId={"order-search"}
+        submitId={"search-button"}
       />
 
-      {
-        orderDetails 
-          ? <CardList cardInfo={orderDetails} />
-          : <p className="text-center mt-4 h4">Cannot find order</p>
-      }
+      {orderDetails && orderDetails ? (
+        <div data-testid="order"><CardList cardInfo={orderDetails}  /></div>
+      ) : (
+        <p className="text-center mt-4 h4">Cannot find order</p>
+      )}
     </Layout>
   );
 };

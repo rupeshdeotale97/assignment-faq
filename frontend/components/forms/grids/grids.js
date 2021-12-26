@@ -47,9 +47,9 @@ import { cardGrid, cardGridItem, cardGridItemTitle, cardGridItemContent } from '
   return (
     <>
       <div className={cardGrid}>
-        {gridItems.map((item) => {
+        {gridItems.map((item, index) => {
           return (
-            <div onClick={item.onClick} data-testid={item.id}>
+            <div onClick={item.onClick} data-testid={item.id} key={`${item.id}-${index}`}>
               <ReactTilt  scale={1.1} tiltEnable={false} key={item.id}>
                 <div className={cardGridItem}>
                   <div className={cardGridItemTitle}>{item.title}</div>

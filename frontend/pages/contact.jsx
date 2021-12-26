@@ -40,7 +40,7 @@ const ContactPage = ({ orders }) => {
   return (
     <Layout>
       <div className={contactWrapper}>
-        <h1>Contact Us</h1>
+        <h1 data-testid="contact-us-heading">Contact Us</h1>
         <div className={emailContainer}>
           <label htmlFor="nameAuthor">Order</label>
           <InputGroup className="mb-3">
@@ -124,7 +124,6 @@ const ContactPage = ({ orders }) => {
                 fontSize={45}
                 backgroundColor="#fff"
                 fontColor="green"
-                data-testid="captcha"
               />
               <input type="hidden" value={captchaCode} />
             </div>
@@ -136,13 +135,14 @@ const ContactPage = ({ orders }) => {
               autoComplete="off"
               value={matchCaptchaCode}
               data-testid="captchaAuthor"
+              data-testid="captcha"
               onChange={(evt) => setMatchCaptchaCode(evt.target.value)}
             />
 
             {showError && <p className={error}>Code is incorrect!</p>}
           </InputGroup>
         </div>
-        <Button disabled={!isEnabled} variant="success" onClick={sendEmail}>
+        <Button data-testid="send" disabled={!isEnabled} variant="success" onClick={sendEmail}>
           <FaPaperPlane />
           Send
         </Button>

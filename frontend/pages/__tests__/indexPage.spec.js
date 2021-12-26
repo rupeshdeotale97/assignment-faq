@@ -11,7 +11,7 @@ const setup = () => {
       push,
       pathname: "/order-details"
     }
-  ))
+  ));
 
   const heading = wrapper.getByTestId('heading')
   const input = wrapper.getByTestId('search')

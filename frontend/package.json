@@ -37,6 +37,7 @@
     "eslint-plugin-jest": "^25.3.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.4.5",
+    "jest-canvas-mock": "^2.3.1",
     "prettier": "^2.5.1"
   },
   "jest": {
@@ -45,6 +46,9 @@
       "js",
       "json",
       "jsx"
+    ],
+    "setupFiles": [
+      "jest-canvas-mock"
     ]
   }
 }
