@@ -8,7 +8,7 @@
     "dev": "next dev -p 4000",
     "start": "next start -p 4000",
     "pretest": "eslint --ext .js,.jsx,.ts,.tsx --fix",
-    "test": "jest --env=jsdom"
+    "test": "jest --env=jsdom --silent --coverage"
   },
   "author": "",
   "license": "ISC",
