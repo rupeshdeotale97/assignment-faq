@@ -165,8 +165,9 @@ Screenshot 4 (Order not Exist)
 ![image](https://user-images.githubusercontent.com/18717863/147488698-fdd3b0df-1fca-4530-8431-467709269026.png)
 
 -Result query to fetch all page view records
+![image](https://user-images.githubusercontent.com/18717863/147488914-fdaae93e-62cd-4832-9bf4-e0ed9055d94d.png)
 
-![image](https://user-images.githubusercontent.com/18717863/147488751-9c7a24ed-9df5-4dd1-8e2b-91d893db65e4.png)
+
 
 
 
