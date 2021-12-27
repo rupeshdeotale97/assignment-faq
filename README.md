@@ -140,19 +140,40 @@ hence, we ask that you do not squash the commits.
 * [Milos Jovanovic](mailto:milos.jovanovic@justeattakeaway.com)
 
 Screenshot 1 (Home Page )
-![image](https://user-images.githubusercontent.com/18717863/147416140-77c45455-7c47-4d3d-b9cb-a006bd8cbae1.png)
+![image](https://user-images.githubusercontent.com/18717863/147488026-4a1406ef-8248-4704-9ada-37a0bf304870.png)
+
 
 Screenshot 2 (Contack Us )
-![Contact Us](https://user-images.githubusercontent.com/18717863/147416444-376596b9-bcfd-4e49-9a03-3baf93a5406a.png)
+![contact](https://user-images.githubusercontent.com/18717863/147488104-6c682c8b-f158-4ca2-b3f5-0426470f664f.png)
 
-Screenshot 3 (Order Details)
-![Order Details](https://user-images.githubusercontent.com/18717863/147416459-e1952e4d-5985-4c6d-9625-c1182fb1c185.png)
 
-Screenshot 4 (Order Match Found)
-![Searched Order](https://user-images.githubusercontent.com/18717863/147416467-237424fa-de55-4c8d-b3b8-dc60bac9ebc1.png)
+Screenshot 3 (Order Match Found)
+![screencapture-localhost-12000-order-details-AXG543-2021-12-27-21_32_09](https://user-images.githubusercontent.com/18717863/147488287-53fb3797-5589-49da-a280-30ede18a935f.png)
 
-Screenshot 5 (Order not Exist)
-![Order not found](https://user-images.githubusercontent.com/18717863/147416489-a5e961ae-7485-4547-ae1e-7b4a2b03be84.png)
+
+Screenshot 4 (Order not Exist)
+![screencapture-localhost-12000-order-details-dsd-2021-12-27-21_30_51](https://user-images.githubusercontent.com/18717863/147488233-86c1f3da-dd37-4e9c-823c-166a5bd7238a.png)
+
+**To store Page View I used SupaBase Opensource DB**
+
+-Function to increment page view
+
+![image](https://user-images.githubusercontent.com/18717863/147488557-2461efc2-807a-496d-a918-56169528ed68.png)
+
+-Table to store Page View records 
+
+![image](https://user-images.githubusercontent.com/18717863/147488698-fdd3b0df-1fca-4530-8431-467709269026.png)
+
+-Result query to fetch all page view records
+
+![image](https://user-images.githubusercontent.com/18717863/147488751-9c7a24ed-9df5-4dd1-8e2b-91d893db65e4.png)
+
+
+
+
+
+
+
 
 
 
