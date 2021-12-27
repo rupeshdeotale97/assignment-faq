@@ -1,31 +1,21 @@
-version: '3.5'
-
+version: "3"
+ 
 services:
-  frontend:
-    container_name: frontend-app
-    image: node:14-alpine
-    restart: unless-stopped
-    working_dir: /usr/src/app
-    volumes:
-      - ./frontend/:/usr/src/app
-    entrypoint: npm run dev
-    ports:
-      - 12000:3000
-    networks:
-      - faq-app
-
-  backend:
-    container_name: backend-app
-    image: node:14-alpine
-    restart: unless-stopped
-    working_dir: /usr/src/app
-    volumes:
-      - ./backend/:/usr/src/app
-    ports:
-      - 11000:3000
-    entrypoint: npm run start
-    networks:
-      - faq-app
-
-networks:
-  faq-app:
+    client:
+       container_name: client
+       build:
+           context: frontend/
+       restart: always
+       depends_on:
+            - api
+       ports:
+           - 12000:12000
+       environment:
+           - API_BASE_URL=http://api:3000
+    api:
+       container_name: api
+       build:
+           context: backend/
+       restart: always
+       ports:
+           - 3000:3000

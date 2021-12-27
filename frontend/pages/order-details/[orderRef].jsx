@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import { useRouter } from 'next/router'
-import API_URL from '../../constants/costants'
-import updatePageView from '../../utils/updatePageView'
+import React, { useState } from 'react';
+import { useRouter } from 'next/router';
+import API_URL from '../../config';
+import updatePageView from '../../utils/updatePageView';
 import Layout from '../../components/layout';
 import SearchBar from '../../components/forms/searchBar';
 import CardDetails from '../../components/forms/cards/cards';

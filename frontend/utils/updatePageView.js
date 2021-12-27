@@ -1,4 +1,4 @@
-import API_URL from '../constants/costants'
+import API_URL from '../config';
 // Storing page view on any route render
 export default async function updatePageView (page) {
   return await fetch(

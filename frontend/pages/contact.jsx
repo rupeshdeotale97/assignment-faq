@@ -6,10 +6,10 @@ import {
   emailContainer,
   contactWrapper,
   error,
-} from "../assets/css/contact.module.css";
+} from "./contact.module.css";
 import { toast } from "react-toastify";
 import updatePageView from "../utils/updatePageView";
-import API_URL from "../constants/costants";
+import API_URL from '../config';
 import ClientCaptcha from "react-client-captcha";
 const ContactPage = ({ orders }) => {
   const [orderReference, setOrderReference] = useState(null);

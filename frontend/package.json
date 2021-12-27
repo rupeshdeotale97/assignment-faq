@@ -5,8 +5,8 @@
   "main": "src/app.js",
   "scripts": {
     "build": "next build",
-    "dev": "next dev",
-    "start": "next start",
+    "dev": "next dev -p 12000",
+    "start": "next start -p 12000",
     "pretest": "eslint --ext .js,.jsx,.ts,.tsx --fix",
     "test": "jest --env=jsdom --silent --coverage"
   },
