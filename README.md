@@ -138,3 +138,21 @@ hence, we ask that you do not squash the commits.
 * [Erkand Imeri](mailto:erkand.imeri@justeattakeaway.com)
 * [Yashar Ayari](mailto:yashar.ayari@justeattakeaway.com)
 * [Milos Jovanovic](mailto:milos.jovanovic@justeattakeaway.com)
+
+Screenshot 1 (Home Page )
+![image](https://user-images.githubusercontent.com/18717863/147416140-77c45455-7c47-4d3d-b9cb-a006bd8cbae1.png)
+
+Screenshot 2 (Contack Us )
+![Contact Us](https://user-images.githubusercontent.com/18717863/147416444-376596b9-bcfd-4e49-9a03-3baf93a5406a.png)
+
+Screenshot 3 (Order Details)
+![Order Details](https://user-images.githubusercontent.com/18717863/147416459-e1952e4d-5985-4c6d-9625-c1182fb1c185.png)
+
+Screenshot 4 (Order Match Found)
+![Searched Order](https://user-images.githubusercontent.com/18717863/147416467-237424fa-de55-4c8d-b3b8-dc60bac9ebc1.png)
+
+Screenshot 5 (Order not Exist)
+![Order not found](https://user-images.githubusercontent.com/18717863/147416489-a5e961ae-7485-4547-ae1e-7b4a2b03be84.png)
+
+
+
