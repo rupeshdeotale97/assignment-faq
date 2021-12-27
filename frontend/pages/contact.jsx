@@ -2,14 +2,13 @@ import React, { useState, useEffect } from "react";
 import { InputGroup, FormControl, Button, Dropdown } from "react-bootstrap";
 import { FaPaperPlane } from "react-icons/fa";
 import Layout from "../components/layout";
-import PageView from '../components/PageView';
+import PageView from '../components/pageView';
 import {
   emailContainer,
   contactWrapper,
   error,
 } from "./contact.module.css";
 import { toast } from "react-toastify";
-import updatePageView from "../utils/updatePageView";
 import API_URL from '../config';
 import ClientCaptcha from "react-client-captcha";
 const ContactPage = ({ orders, slug }) => {

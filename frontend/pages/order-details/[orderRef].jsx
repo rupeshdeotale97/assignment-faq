@@ -4,7 +4,7 @@ import API_URL from '../../config';
 import Layout from '../../components/layout';
 import SearchBar from '../../components/forms/searchBar';
 import CardDetails from '../../components/forms/cards/cards';
-import PageView from '../../components/PageView';
+import PageView from '../../components/pageView';
 function OrderDetails({ orders, slug }) {
   const router = useRouter()
   const { orderRef } = router.query

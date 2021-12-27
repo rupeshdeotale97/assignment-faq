@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Layout from '../../components/layout';
 import SearchBar  from '../../components/forms/searchBar';
-import PageView from '../../components/PageView';
+import PageView from '../../components/pageView';
 function OrderDetailsSearch({slug}) {
   const router = useRouter()
 

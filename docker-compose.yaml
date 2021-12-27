@@ -12,6 +12,9 @@ services:
            - 12000:12000
        environment:
            - API_BASE_URL=http://api:3000
+           - NEXT_PUBLIC_SUPABASE_URL=https://ykwkfndqhdbirutxwsey.supabase.co
+           - NEXT_PUBLIC_SUPABASE_CLIENT_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTY0MDYwMDAzNywiZXhwIjoxOTU2MTc2MDM3fQ.bmzYOfkN4T61abXcY3iI0USGLDUmlIVLJxMyDWFnF2M
+           - SUPABASE_SERVICE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoic2VydmljZV9yb2xlIiwiaWF0IjoxNjQwNjAwMDM3LCJleHAiOjE5NTYxNzYwMzd9.nZueOy5L-Wrx07N1aqMdBZIbDllN9WpEMKkeOuKxrhk
     api:
        container_name: api
        build:
