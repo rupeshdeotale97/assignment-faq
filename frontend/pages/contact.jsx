@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { InputGroup, FormControl, Button, Dropdown } from "react-bootstrap";
 import { FaPaperPlane } from "react-icons/fa";
 import Layout from "../components/layout";
+import PageView from '../components/PageView';
 import {
   emailContainer,
   contactWrapper,
@@ -11,7 +12,7 @@ import { toast } from "react-toastify";
 import updatePageView from "../utils/updatePageView";
 import API_URL from '../config';
 import ClientCaptcha from "react-client-captcha";
-const ContactPage = ({ orders }) => {
+const ContactPage = ({ orders, slug }) => {
   const [orderReference, setOrderReference] = useState(null);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -36,6 +37,12 @@ const ContactPage = ({ orders }) => {
       toast.success("Success! Your message was sent.");
     }
   };
+
+  useEffect(() => {
+    fetch(`/api/views/contact`, {
+      method: 'POST'
+    });
+  }, [slug]);
 
   return (
     <Layout>
@@ -147,18 +154,19 @@ const ContactPage = ({ orders }) => {
           Send
         </Button>
       </div>
+      <PageView slug={slug} />
     </Layout>
   );
 };
 
 // This function gets called at build time
 export async function getServerSideProps() {
-  await updatePageView("order-details");
   const res = await fetch(`${API_URL}/orders`);
   const orders = await res.json();
   return {
     props: {
       orders,
+      slug: 'contact'
     },
   };
 }

@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import API_URL from '../../config';
-import updatePageView from '../../utils/updatePageView';
 import Layout from '../../components/layout';
 import SearchBar from '../../components/forms/searchBar';
 import CardDetails from '../../components/forms/cards/cards';
-
-function OrderDetails({ orders }) {
+import PageView from '../../components/PageView';
+function OrderDetails({ orders, slug }) {
   const router = useRouter()
   const { orderRef } = router.query
   const orderDetails = orders.find(order => order.reference === orderRef)
@@ -15,6 +14,12 @@ function OrderDetails({ orders }) {
   const onSearch = () => {
     router.push(`${searchInput}`)
   }
+
+  useEffect(() => {
+    fetch(`/api/views/${slug}`, {
+      method: 'POST'
+    });
+  }, [slug]);
 
   return (
     <Layout>
@@ -36,21 +41,21 @@ function OrderDetails({ orders }) {
       ) : (
         <p className="text-center mt-4 h4">Cannot find order</p>
       )}
+      <PageView slug={slug} />
     </Layout>
   );
 };
 
 // This function gets called at build time
 export async function getServerSideProps() {
-  // Storing page view on any route render
-  await updatePageView('order-details')
   // Call an external API endpoint to get posts
   const res = await fetch(`${API_URL}/orders`)
   const orders = await res.json();
 
   return {
     props: {
-      orders
+      orders,
+      slug: 'order-details-results'
     }
   }
 }

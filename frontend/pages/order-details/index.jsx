@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Layout from '../../components/layout';
 import SearchBar  from '../../components/forms/searchBar';
-
-function OrderDetailsSearch() {
+import PageView from '../../components/PageView';
+function OrderDetailsSearch({slug}) {
   const router = useRouter()
 
   const [searchInput, setSearchInput] = useState('')
@@ -11,6 +11,12 @@ function OrderDetailsSearch() {
   const onSearch = () => {
     router.push(`/order-details/${searchInput}`)
   }
+
+  useEffect(() => {
+    fetch(`/api/views/${slug}`, {
+      method: 'POST'
+    });
+  }, [slug]);
 
   return (
     <Layout>
@@ -26,8 +32,18 @@ function OrderDetailsSearch() {
         searchId={'search-input'}
         submitId={'submit'}
       />
+      <PageView slug={slug} />
     </Layout>
   );
 };
+
+// This function gets called at build time
+export async function getServerSideProps() {
+  return {
+    props: {
+      slug: 'order-details'
+    }
+  }
+}
 
 export default OrderDetailsSearch;
